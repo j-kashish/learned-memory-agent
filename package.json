@@ -4,6 +4,12 @@
   "scripts": {
     "start": "echo START SCRIPT WORKS",
     "demo": "echo DEMO SCRIPT WORKS"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.5.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "ts-node": "^10.9.2"
   }
 }
-

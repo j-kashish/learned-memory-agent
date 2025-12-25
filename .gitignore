@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+memory.db
+data/
+
+package-lock.json
+

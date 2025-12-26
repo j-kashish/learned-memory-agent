@@ -11,12 +11,4 @@ export class InMemoryStore implements MemoryStore {
   getAll(): Memory[] {
     return this.memories;
   }
-
-  getByType(type: Memory["type"]): Memory[] {
-    return this.memories.filter(m => m.type === type);
-  }
-
-  clear(): void {
-    this.memories = [];
-  }
 }

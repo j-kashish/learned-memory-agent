@@ -1,10 +1,14 @@
-import { InMemoryStore } from "../memory/inMemoryStore";
-import { MemoryManager } from "../memory/memory.manager";
+import { SQLiteStore } from "./sqliteStore";
+import { MemoryManager } from "./memory.manager";
 
-const store = new InMemoryStore();
+const store = new SQLiteStore();
 const manager = new MemoryManager(store);
 
-manager.remember("User is learning TypeScript", "fact", 4);
-manager.remember("User prefers short explanations", "preference", 5);
+manager.createMemory("Supplier GmbH uses Leistungsdatum as service date");
+manager.createMemory("Parts AG prices include VAT");
+manager.createMemory("Freight & Co uses Seefracht for shipping");
 
-console.log(manager.recall());
+console.log(manager.search("service date"));
+
+
+
